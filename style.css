@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  background-color: #70695F;
+}
+
+.clock{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5vh 5vw;
+  font-family: Roboto;
+  }
+
+#txt{
+  font-size: 10vw;
+
+  color: Orange;
+
+}

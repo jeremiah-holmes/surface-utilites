@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<style>
+
+  *{
+
+}
+</style>
+<body onload="startTime()">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSedJjlp-KClaUAsTgRbedbQA-R0dkbbymPXRZ5uh_XCFnCM1A/viewform?embedded=true" width="200" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<div class="clock">
+  <div id="txt"></div>
+</div>
+
+
+
+</body>
+
+<script>
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+</html>
